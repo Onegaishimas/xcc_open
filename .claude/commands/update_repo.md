@@ -2,21 +2,17 @@
 
 Please add, commit, and push our current progress with detailed commit messages.
 
-## Usage
-This command should be executed when asked to update the repository with current progress.
-
 ## Standard Process
-1. Check git status
-2. Add all changes
-3. Review staged changes
-4. Create detailed commit message
-5. Commit changes
-6. Push to remote repository
+1. Run the full test suite (per AGENT.md Test Commands) — **do not commit if tests fail**
+2. Check `git status` and review all changes
+3. Clean up temporary files and debug code before staging
+4. Stage changes (`git add .`) and review the staged diff (`git diff --staged`)
+5. Commit using the project's commit format (from AGENT.md):
+   ```bash
+   git commit -m "feat: [brief description]" -m "- [key change 1]" -m "- [key change 2]" -m "Related to [Task#] in [PRD]"
+   ```
+6. Push to the remote repository
 
-## Example Usage
-```bash
-git add .
-git diff --staged
-git commit -m "descriptive commit message with context"
-git push origin main
-```
+## Notes
+- Follow the "Before Any Commit" checklist in AGENT.md
+- If work relates to a task list, update the task list file and "Relevant Files" section before committing

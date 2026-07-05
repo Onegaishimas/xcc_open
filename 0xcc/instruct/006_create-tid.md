@@ -175,3 +175,4 @@ The TID should be structured to directly inform the task generation process by:
 5. Record the clarifying questions and their answers in the "Decisions from Clarifying Questions" section
 6. Ensure the TID provides sufficient detail for accurate and comprehensive task generation
 7. Include specific implementation details that will translate directly into actionable tasks
+8. After saving, record the document in AGENT.md: add/flip its Document Inventory entry to ✅ and update Current Status/Next Steps

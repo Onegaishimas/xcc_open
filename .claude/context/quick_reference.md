@@ -192,7 +192,7 @@ AGENT.md                        # Project memory (root level, canonical)
 ## 🚀 Getting Started
 
 ### First Time Setup
-1. Run setup script to create all files
+1. Clone the template repository (all files ship with it)
 2. Load `@AGENT.md` 
 3. Run `/health` to establish baseline
 4. Try `/feature test-feature` to test workflow

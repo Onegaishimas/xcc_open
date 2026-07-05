@@ -161,3 +161,4 @@ The TDD should be understandable by:
 4. Take the user's answers and the PRD content to create a comprehensive TDD
 5. Record the clarifying questions and their answers in the "Decisions from Clarifying Questions" section
 6. Ensure the TDD provides enough technical detail for the next phase (Technical Implementation Document)
+7. After saving, record the document in AGENT.md: add/flip its Document Inventory entry to ✅ and update Current Status/Next Steps

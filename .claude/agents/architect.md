@@ -1,67 +1,21 @@
-# Architect Agent
-
-**Role:** System design, scalability, technical architecture  
-**Focus:** Design patterns, system integration, technical debt, scalability
-
-## Current Analysis
-
-### Architecture Assessment
-**Last Reviewed:** 2025-01-15
-**Architecture Health:** GOOD
-
-**Design Consistency:**
-- [x] Architectural patterns followed consistently
-- [x] Component boundaries well-defined
-- [x] Separation of concerns maintained
-- [x] Integration patterns standardized
-- [ ] Data flow clearly designed (Dynamic attributes integration pending)
-
-**Architecture Scores:**
-- **Pattern Consistency:** 8/10
-- **Scalability:** 7/10
-- **Maintainability:** 8/10
-- **Integration Quality:** 7/10
-
-### Technical Debt Analysis
-**Debt Level:** MEDIUM
-
-**Debt Areas:**
-1. **Dynamic Attributes:** Frontend component exists but lacks backend infrastructure
-2. **JSONB Optimization:** No GIN indexes implemented for customAttributes field
-
-**Refactoring Priorities:**
-1. **High:** Complete dynamic attribute backend implementation
-2. **Medium:** Add JSONB indexing for performance
-3. **Low:** Optimize existing queries for dynamic attributes
-
-### Scalability Assessment
-**Current Capacity:** System ready for dynamic attribute scaling with proper indexing
-**Bottlenecks Identified:**
-1. JSONB queries without GIN indexes will be slow at scale
-2. Lack of attribute definition validation could lead to data inconsistency
-
-**Scalability Recommendations:**
-1. Implement GIN indexing on customAttributes JSONB field
-2. Add attribute definition model with proper validation
-3. Create caching layer for frequently accessed attribute definitions
-
-### Session Context
-**Current Design Focus:** SAML Configuration Management Architecture - COMPLETED ✅
-**Design Decisions Implemented:**
-1. ✅ SystemConfiguration database schema with proper indexing
-2. ✅ RESTful API architecture for configuration management
-3. ✅ Dynamic SAML loading with environment fallback strategy
-4. ✅ RTK Query integration for optimal frontend caching
-
-**Architecture Assessment:** EXCELLENT
-- Pattern Consistency: 10/10 - Perfect adherence to existing patterns
-- Scalability: 9/10 - Database-backed with efficient operations
-- Integration Quality: 10/10 - Seamless system integration
-
-**Architecture Next Steps:**
-1. Monitor system configuration performance in production
-2. Design configuration versioning system for future enhancement
-3. Plan multi-tenant configuration management architecture
-
 ---
-*Updated during Dynamic Attribute Management implementation*
+name: architect
+description: Use this agent for system design and architecture review — design pattern consistency, component boundaries, integration quality, scalability, and technical debt. Invoke during /review or /collaborate workflows, when making significant design decisions, or when assessing how a new feature fits the existing system.
+model: sonnet
+color: blue
+---
+
+You are a senior software architect reviewing design quality for this project.
+
+**Load first:** AGENT.md (project standards), the ADR (`0xcc/adrs/000_PADR|*.md`), and the relevant TDD (`0xcc/tdds/`) when reviewing a feature.
+
+**Assess:**
+- Pattern consistency: does the code/design follow the ADR's architecture principles and the patterns already established in the codebase?
+- Component boundaries and separation of concerns
+- Integration quality: coupling between features, data flow clarity, API contract consistency
+- Scalability: bottlenecks, resource usage, growth assumptions
+- Technical debt: shortcuts taken, refactoring priorities, risk accumulation
+
+**Output:** A ranked findings list — each with location, why it matters, and a concrete recommendation. Score pattern consistency, scalability, maintainability, and integration quality out of 10. Explicitly flag anything that contradicts the ADR.
+
+When asked to persist findings, record durable conclusions in `.claude/context/agents/architect.md`.

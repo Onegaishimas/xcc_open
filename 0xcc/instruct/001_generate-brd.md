@@ -104,4 +104,5 @@ TASK: Using the source material plus the user's answers, output the BRD in the e
 1. Do NOT generate the BRD until the user has answered the clarifying questions.
 2. Keep the YAML schema exact — the next step (`002_create-project-prd.md`) expects these keys.
 3. Use `"TBD"` for unknowns rather than omitting fields or guessing.
-4. Once the BRD is saved, proceed to `0xcc/instruct/002_create-project-prd.md`, referencing the BRD file as context for the Project PRD.
+4. After saving, record the document in AGENT.md: flip its Document Inventory entry to ✅ and update Current Status/Next Steps.
+5. Once the BRD is saved, proceed to `0xcc/instruct/002_create-project-prd.md`, referencing the BRD file as context for the Project PRD.

@@ -188,3 +188,4 @@ The Feature PRD should:
 4. Take the user's answers to create a comprehensive, implementable Feature PRD
 5. Record the clarifying questions and their answers in the "Decisions from Clarifying Questions" section — the reasoning must survive into future sessions
 6. Ensure the PRD provides clear requirements for the subsequent TDD/TID/Tasks workflow
+7. After saving, record the document in AGENT.md: add/flip its Document Inventory entry to ✅ and update Current Status/Next Steps

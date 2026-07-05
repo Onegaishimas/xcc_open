@@ -32,6 +32,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 12. **Identify Relevant Files:** Based on the tasks and source documents, identify files to be created or modified, including corresponding test files.
 13. **Generate Final Output:** Combine parent tasks, sub-tasks, relevant files, checklist results, and notes into the final Markdown structure.
 14. **Save Task List:** Save the document in `0xcc/tasks/` as `[###]_FTASKS|[feature-name].md`, where `[feature-name]` matches the base name of the input Feature PRD file (e.g., input `001_FPRD|User_Profile_Editing.md` → output `001_FTASKS|User_Profile_Editing.md`).
+15. **Update AGENT.md:** Record the new task list in the Document Inventory (add/flip its entry to ✅) and update Current Status/Next Steps.
 
 ## Category Checklist
 

@@ -27,47 +27,35 @@ All framework files are organized under the `0xcc/` directory:
 
 ## Step-by-Step Setup
 
-### 1. Clone the Template
-```bash
-git clone https://github.com/hitsainet/xcc_open.git
-```
+### Option A: Use the GitHub Template (recommended)
 
-### 2. Remove Template Git History
+1. Go to [github.com/hitsainet/xcc_open](https://github.com/hitsainet/xcc_open)
+2. Click **"Use this template"** → **"Create a new repository"**
+3. Name it, choose Public or Private, and click **"Create repository"** — you get a fresh repo with no template history
+4. Clone your new repository and enter it:
 ```bash
-rm -rf xcc_open/.git
-```
-
-### 3. Rename to Your Project
-```bash
-mv xcc_open your-project-name
+git clone https://github.com/yourusername/your-project-name.git
 cd your-project-name
 ```
 
-### 4. Create New GitHub Repository
-1. Go to [github.com](https://github.com)
-2. Click **"+"** → **"New repository"**
-3. Repository name: `your-project-name`
-4. Set to **Public** or **Private**
-5. **DO NOT** check "Add a README file"
-6. Click **"Create repository"**
+### Option B: Manual Clone (non-GitHub remotes or offline)
 
-### 5. Initialize New Git Repository
 ```bash
+# 1. Clone the template and flush its history
+git clone https://github.com/hitsainet/xcc_open.git your-project-name
+cd your-project-name
+rm -rf .git
+
+# 2. Start a fresh repository
 git init
 git add .
 git commit -m "Initial commit: XCC Framework with 0xcc organization"
 git branch -M main
-```
 
-### 6. Connect to GitHub and Push
-```bash
-git remote add origin https://github.com/yourusername/your-project-name.git
+# 3. Connect to your remote and push
+git remote add origin https://your-git-host/your-project-name.git
 git push -u origin main
 ```
-
-**Authentication:** GitHub will prompt for:
-- **Username:** `yourusername`
-- **Password:** Use your Personal Access Token (not your GitHub password)
 
 ---
 
@@ -222,7 +210,8 @@ your-project-name/
 │   │   ├── feature.md              # /feature command
 │   │   ├── health.md               # /health command
 │   │   ├── review.md               # /review command
-│   │   └── smart-clear.md          # /smart-clear command
+│   │   ├── smart-clear.md          # /smart-clear command
+│   │   └── update_repo.md          # /update_repo command
 │   ├── context/                    # Context management
 │   │   ├── agents/                 # Expert agent contexts
 │   │   │   ├── product_engineer.md
@@ -230,10 +219,8 @@ your-project-name/
 │   │   │   ├── architect.md
 │   │   │   └── test_engineer.md
 │   │   ├── health/                 # Health monitoring
+│   │   │   ├── dashboard.md
 │   │   │   └── assessment_template.md
-│   │   ├── project/                # Project information
-│   │   │   ├── health_summary.md
-│   │   │   └── setup_info.md
 │   │   └── sessions/               # Session tracking
 │   │       └── session_template.md
 │   ├── prompts/                    # Analysis templates
@@ -296,8 +283,8 @@ your-project-name/
 - Decision transparency for stakeholders and team alignment
 
 ### Framework Portability
-- Easy updates: Replace `0xcc/` directory to update framework
-- Project templates: Copy `0xcc/` structure to new projects
+- Easy updates: Replace the `0xcc/instruct/` directory to update the framework (never replace `0xcc/` wholesale — it contains your project's PRDs, TDDs, TIDs, and task lists)
+- Project templates: Copy the `0xcc/` folder structure to new projects
 - Custom extensions: Add organization-specific instructions
 - Version control: Track framework evolution separately from project code
 

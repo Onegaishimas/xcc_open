@@ -9,7 +9,7 @@ If a Business Requirements Document exists at `0xcc/prds/000_BRD|[project-name].
 ## Process
 
 1. **Receive Project Description:** Use the BRD (`0xcc/prds/000_BRD|[project-name].md`) if one exists; otherwise the user provides a high-level description of the project they want to build.
-2. **Ask Strategic Clarifying Questions:** Before writing the Project PRD, the AI *must* ask clarifying questions to understand the project scope, goals, and feature breakdown. Provide options in letter/number lists for easy selection.
+2. **Ask Strategic Clarifying Questions:** Before writing the Project PRD, the AI *must* ask clarifying questions to understand the project scope, goals, and feature breakdown. **Skip questions the BRD already answers** — ask only about what is new, ambiguous, or marked TBD. Provide options in letter/number lists for easy selection.
 3. **Generate Project PRD:** Create a comprehensive project-level document using the structure outlined below.
 4. **Save Project PRD:** Save the generated document as `000_PPRD|[project-name].md` inside the `0xcc/prds/` directory.
 
@@ -166,3 +166,4 @@ The Project PRD should be understandable by:
 3. Ask clarifying questions to understand the project vision and scope
 4. Create a comprehensive project foundation that will guide all subsequent development work
 5. Ensure the feature breakdown provides clear guidance for the next phase of detailed feature PRD creation
+6. After saving, record the document in AGENT.md: flip its Document Inventory entry to ✅ and update Current Status/Next Steps

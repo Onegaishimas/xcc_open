@@ -352,7 +352,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 #### Phase 0: Business Requirements (once per project)
 ```bash
 # Clone template, rm -rf .git, rename root, git init
-@instruct/001_generate-brd.md
+@0xcc/instruct/001_generate-brd.md
 # Provide: free-form transcript + supporting research/documents
 # Generate: 000_BRD|[project-name].md
 ```
@@ -360,20 +360,20 @@ This section details each instruction document's purpose, approach, inputs, and 
 #### Phase 1: Project Foundation (Session 1-2)
 ```bash
 # Session 1: Project Vision
-@instruct/002_create-project-prd.md
-@prds/000_BRD|[project-name].md   # if it exists
+@0xcc/instruct/002_create-project-prd.md
+@0xcc/prds/000_BRD|[project-name].md   # if it exists
 # Generate: 000_PPRD|[project-name].md
 
 # Session 2: Technical Foundation  
-@instruct/003_create-adr.md
-@prds/000_PPRD|[project-name].md
+@0xcc/instruct/003_create-adr.md
+@0xcc/prds/000_PPRD|[project-name].md
 # Generate: 000_PADR|[project-name].md
 # Copy Project Standards to AGENT.md
 
 # Session 3: Foundation Backlog
-@instruct/007_generate-tasks.md
-@prds/000_PPRD|[project-name].md
-@adrs/000_PADR|[project-name].md
+@0xcc/instruct/007_generate-tasks.md
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 # Generate: 000_FTASKS|Project_Foundation.md
 # (scaffolding, CI/CD, database, auth, tooling — work owned by no single feature)
 ```
@@ -383,32 +383,32 @@ For each feature from the Project PRD:
 
 ```bash
 # Feature Requirements Session
-@instruct/004_create-feature-prd.md
-@prds/000_PPRD|[project-name].md
-@adrs/000_PADR|[project-name].md
+@0xcc/instruct/004_create-feature-prd.md
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 # Generate: 001_FPRD|[feature-name].md
 
 # Technical Design Session
-@instruct/005_create-tdd.md
-@prds/001_FPRD|[feature-name].md
+@0xcc/instruct/005_create-tdd.md
+@0xcc/prds/001_FPRD|[feature-name].md
 # Generate: 001_FTDD|[feature-name].md
 
 # Implementation Planning Session
-@instruct/006_create-tid.md
-@prds/001_FPRD|[feature-name].md
-@tdds/001_FTDD|[feature-name].md
+@0xcc/instruct/006_create-tid.md
+@0xcc/prds/001_FPRD|[feature-name].md
+@0xcc/tdds/001_FTDD|[feature-name].md
 # Generate: 001_FTID|[feature-name].md
 
 # Task Generation Session
-@instruct/007_generate-tasks.md
-@prds/001_FPRD|[feature-name].md
-@tdds/001_FTDD|[feature-name].md
-@tids/001_FTID|[feature-name].md
+@0xcc/instruct/007_generate-tasks.md
+@0xcc/prds/001_FPRD|[feature-name].md
+@0xcc/tdds/001_FTDD|[feature-name].md
+@0xcc/tids/001_FTID|[feature-name].md
 # Generate: 001_FTASKS|[feature-name].md
 
 # Implementation Sessions
-@instruct/008_process-task-list.md
-@tasks/001_FTASKS|[feature-name].md
+@0xcc/instruct/008_process-task-list.md
+@0xcc/tasks/001_FTASKS|[feature-name].md
 # Execute tasks with progress tracking
 ```
 
@@ -521,41 +521,29 @@ git merge docs/feature-planning
 
 ### Quick Start Guide
 
-#### Step 1: Initialize Project Structure
+#### Step 1: Create Your Project from the Template
 ```bash
-# Create project directory
-mkdir my-awesome-project
-cd my-awesome-project
+# On GitHub: open hitsainet/xcc_open and click "Use this template",
+# then clone your new repository:
+git clone https://github.com/yourusername/your-project-name.git
+cd your-project-name
 
-# Initialize git
-git init
-
-# Create folder structure
-mkdir -p prds adrs tdds tids tasks docs instruct
-
-# Create initial AGENT.md
-touch AGENT.md
+# (Alternative: clone the template directly, rm -rf .git, and git init —
+# see the root README.md "Step-by-Step Setup" for the full manual flow)
 ```
 
-#### Step 2: Set Up Framework Files
+#### Step 2: Verify Framework Files
 ```bash
-# Copy instruction files to instruct/ folder
-# (From this framework repository)
-cp framework/instruct/* instruct/
-
-# Verify instruction files
-ls instruct/
+ls 0xcc/instruct/
 # Should show: 000_README.md through 008_process-task-list.md
 ```
 
 #### Step 3: Start Documentation Workflow
 ```bash
-# Start Claude Code session
-claude-code
-
+# Start a Claude Code session, then:
 # Begin with the BRD (once per project), then the Project PRD
-@instruct/001_generate-brd.md
-@instruct/002_create-project-prd.md
+@0xcc/instruct/001_generate-brd.md
+@0xcc/instruct/002_create-project-prd.md
 
 # Follow the guided process...
 ```
@@ -589,7 +577,7 @@ You'll know the framework is working when:
    - ✅ "Create user registration form with email validation, password strength requirements, and email confirmation workflow"
 
 2. **Reference Context Explicitly**
-   - Always reference related documents: `@prds/000_PPRD|Project_Name.md`
+   - Always reference related documents: `@0xcc/prds/000_PPRD|Project_Name.md`
    - Link to ADR decisions: "Following JWT approach per ADR section 2.3"
 
 3. **Update Status Religiously**
@@ -627,8 +615,8 @@ You'll know the framework is working when:
 **Solution:** Reload the core project files
 ```bash
 @AGENT.md                           # Project memory and Document Inventory
-@prds/000_PPRD|[project-name].md     # Project foundation  
-@adrs/000_PADR|[project-name].md     # Technical standards
+@0xcc/prds/000_PPRD|[project-name].md     # Project foundation  
+@0xcc/adrs/000_PADR|[project-name].md     # Technical standards
 ls -la */                           # Check completion status
 ```
 
@@ -677,6 +665,6 @@ Remember: **Think first, then build.** The time invested in proper documentation
 
 ---
 
-*Framework Version: 1.0*  
-*Last Updated: [Current Date]*  
-*License: [Your License Choice]*
+*Framework Version: 1.2*  
+*Last Updated: 2026-07-05*  
+*License: MIT*

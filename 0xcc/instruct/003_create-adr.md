@@ -267,6 +267,7 @@ This content should be **copied into the project's AGENT.md file** to ensure all
 This ADR should be:
 - **Created after** the Project PRD is complete
 - **Content added to AGENT.md** immediately after generation
+- **Followed by** generating the project foundation backlog (`007_generate-tasks.md` with the Project PRD + this ADR → `000_FTASKS|Project_Foundation.md`)
 - **Referenced by** all subsequent feature PRDs, TDDs, and TIDs
 - **Updated occasionally** as major architectural decisions evolve
 - **Consulted during** task generation to ensure consistency
@@ -281,3 +282,4 @@ This ADR should be:
 6. Include clear, actionable guidelines that can be easily referenced during development
 7. Format the AGENT.md section for easy copy-paste into the project's AGENT.md file
 8. Consider the project's specific requirements, timeline, and team capabilities when presenting options
+9. After saving, record the document in AGENT.md: flip its Document Inventory entry to ✅ and update Current Status/Next Steps (next: the foundation backlog via `007_generate-tasks.md`)
