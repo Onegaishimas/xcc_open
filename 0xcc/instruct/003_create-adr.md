@@ -11,7 +11,7 @@ To guide an AI assistant in creating a comprehensive Architecture Decision Recor
 3. **Assess Technical Landscape:** Consider available technology options for each decision area.
 4. **Ask Technical Evaluation Questions:** Present technology choices and trade-offs for user decision-making. Provide options in letter/number lists for easy selection.
 5. **Generate ADR:** Create a comprehensive architecture decision record using the structure outlined below, including both a full documentation version and a condensed AGENT.md section.
-6. **Save ADR Files:** Save both the complete document as `000_PADR|[project-name].md` in `0xcc/adrs/` and generate the AGENT.md content section.
+6. **Save ADR Files:** Save both the complete document as `000_PADR_[project-name].md` in `0xcc/adrs/` and generate the AGENT.md content section.
 
 ## Technical Evaluation Questions (Examples)
 
@@ -247,7 +247,7 @@ The ADR serves as a reference for:
 ## Output
 
 * **Format:** Two files will be generated:
-  1. **Full ADR:** `000_PADR|[project-name].md` in `0xcc/adrs/` directory (complete documentation)
+  1. **Full ADR:** `000_PADR_[project-name].md` in `0xcc/adrs/` directory (complete documentation)
   2. **AGENT.md Content:** Condensed standards for inclusion in project's `AGENT.md` file
 
 ## AGENT.md Integration
@@ -267,7 +267,7 @@ This content should be **copied into the project's AGENT.md file** to ensure all
 This ADR should be:
 - **Created after** the Project PRD is complete
 - **Content added to AGENT.md** immediately after generation
-- **Followed by** generating the project foundation backlog (`007_generate-tasks.md` with the Project PRD + this ADR → `000_FTASKS|Project_Foundation.md`)
+- **Followed by** generating the project foundation backlog (`007_generate-tasks.md` with the Project PRD + this ADR → `000_FTASKS_Project_Foundation.md`)
 - **Referenced by** all subsequent feature PRDs, TDDs, and TIDs
 - **Updated occasionally** as major architectural decisions evolve
 - **Consulted during** task generation to ensure consistency

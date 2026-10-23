@@ -18,13 +18,13 @@ To pick up where you left off in a new session, load `@AGENT.md` and check the D
 
 ### Document Creation Sequence
 0. **Business Requirements** (first step, once per project)
-   - `000_BRD|[project-name].md` → `0xcc/prds/` (Business Requirements Document, from transcript + supporting research)
+   - `000_BRD_[project-name].md` → `0xcc/prds/` (Business Requirements Document, from transcript + supporting research)
 
 1. **Project Foundation**
-   - `000_PPRD|[project-name].md` → `0xcc/prds/` (Project PRD)
-   - `000_PADR|[project-name].md` → `0xcc/adrs/` (Architecture Decision Record)
+   - `000_PPRD_[project-name].md` → `0xcc/prds/` (Project PRD)
+   - `000_PADR_[project-name].md` → `0xcc/adrs/` (Architecture Decision Record)
    - Update this AGENT.md with Project Standards from ADR
-   - `000_FTASKS|Project_Foundation.md` → `0xcc/tasks/` (Foundation backlog from PPRD + ADR: scaffolding, CI/CD, database, auth, tooling)
+   - `000_FTASKS_Project_Foundation.md` → `0xcc/tasks/` (Foundation backlog from PPRD + ADR: scaffolding, CI/CD, database, auth, tooling)
 
 2. **Feature Development** (repeat for each feature)
    - `[###]_FPRD|[feature-name].md` → `0xcc/prds/` (Feature PRD)
@@ -45,19 +45,19 @@ To pick up where you left off in a new session, load `@AGENT.md` and check the D
 ## Document Inventory
 
 ### Project Level Documents
-- ❌ 0xcc/prds/000_BRD|[project-name].md (Business Requirements Document)
-- ❌ 0xcc/prds/000_PPRD|[project-name].md (Project PRD)
-- ❌ 0xcc/adrs/000_PADR|[project-name].md (Architecture Decision Record)
-- ❌ 0xcc/tasks/000_FTASKS|Project_Foundation.md (Foundation backlog)
+- ❌ 0xcc/prds/000_BRD_[project-name].md (Business Requirements Document)
+- ❌ 0xcc/prds/000_PPRD_[project-name].md (Project PRD)
+- ❌ 0xcc/adrs/000_PADR_[project-name].md (Architecture Decision Record)
+- ❌ 0xcc/tasks/000_FTASKS_Project_Foundation.md (Foundation backlog)
 
 ### Feature Documents
 *[Add as features are identified and developed]*
 
 **Example format:**
-- ❌ 0xcc/prds/001_FPRD|Feature_A.md (Feature PRD)
-- ❌ 0xcc/tdds/001_FTDD|Feature_A.md (Technical Design Doc)
-- ❌ 0xcc/tids/001_FTID|Feature_A.md (Technical Implementation Doc)
-- ❌ 0xcc/tasks/001_FTASKS|Feature_A.md (Task List)
+- ❌ 0xcc/prds/001_FPRD_Feature_A.md (Feature PRD)
+- ❌ 0xcc/tdds/001_FTDD_Feature_A.md (Technical Design Doc)
+- ❌ 0xcc/tids/001_FTID_Feature_A.md (Technical Implementation Doc)
+- ❌ 0xcc/tasks/001_FTASKS_Feature_A.md (Task List)
 
 ### Status Indicators
 - ✅ **Complete:** Document finished and reviewed
@@ -184,16 +184,16 @@ project-root/
 ```
 
 ### File Naming Convention
-- **Project Level:** `000_PPRD|ProjectName.md`, `000_PADR|ProjectName.md`
-- **Feature Level:** `001_FPRD|FeatureName.md`, `001_FTDD|FeatureName.md`, etc.
+- **Project Level:** `000_PPRD_ProjectName.md`, `000_PADR_ProjectName.md`
+- **Feature Level:** `001_FPRD_FeatureName.md`, `001_FTDD_FeatureName.md`, etc.
 - **Sequential:** Use 001, 002, 003... for features in priority order
 - **Framework Files:** All in `0xcc/` directory for clear organization
 - **Project Files:** Standard locations (src/, tests/, package.json, etc.)
 
 ### Reference Documents
 - **Framework Documentation:** @0xcc/instruct/000_README.md
-- **Current Project PRD:** @0xcc/prds/000_PPRD|[project-name].md (after creation)
-- **Tech Standards:** @0xcc/adrs/000_PADR|[project-name].md (after creation)
+- **Current Project PRD:** @0xcc/prds/000_PPRD_[project-name].md (after creation)
+- **Tech Standards:** @0xcc/adrs/000_PADR_[project-name].md (after creation)
 
 ---
 

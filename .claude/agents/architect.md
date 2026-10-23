@@ -7,7 +7,7 @@ color: blue
 
 You are a senior software architect reviewing design quality for this project.
 
-**Load first:** AGENT.md (project standards), the ADR (`0xcc/adrs/000_PADR|*.md`), and the relevant TDD (`0xcc/tdds/`) when reviewing a feature.
+**Load first:** AGENT.md (project standards), the ADR (`0xcc/adrs/000_PADR_*.md`), and the relevant TDD (`0xcc/tdds/`) when reviewing a feature.
 
 **Assess:**
 - Pattern consistency: does the code/design follow the ADR's architecture principles and the patterns already established in the codebase?

@@ -8,7 +8,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 
 - **Required:** Feature PRD (`[###]_FPRD|[feature-name].md`) — requirements, user stories, acceptance criteria, edge cases
 - **Required:** Feature TDD (`[###]_FTDD|[feature-name].md`) and TID (`[###]_FTID|[feature-name].md`) — these carry the migration, deployment, configuration, error-handling, integration, and utility work that the PRD alone does not. If either is missing, stop and recommend creating it first (`005_create-tdd.md` / `006_create-tid.md`). Only proceed without them at the user's explicit request, and note in the task list that coverage is limited to the PRD.
-- **Reference:** Project ADR (`000_PADR|[project-name].md`) for standards, and AGENT.md for project test commands
+- **Reference:** Project ADR (`000_PADR_[project-name].md`) for standards, and AGENT.md for project test commands
 
 ## Output
 
@@ -20,7 +20,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 
 1.  **Receive Document References:** The user points the AI to a Feature PRD and its TDD and TID.
 2.  **Analyze Source Documents:** Read the PRD (functional requirements, user stories, acceptance criteria, edge cases, dependencies, open questions), the TDD (architecture, data design, API design, deployment/DevOps), and the TID (file organization, implementation patterns, error handling, configuration, integration strategy).
-3.  **Assess Current State:** Review the existing codebase to understand existing infrastructure, architectural patterns and conventions established in the project's ADR. Identify existing components, utilities, and files that can be leveraged or need modification. **If the codebase is empty or nearly empty** (e.g., this is the project's first feature), check whether `0xcc/tasks/000_FTASKS|Project_Foundation.md` exists. If it does not, either generate it first (see "Project Foundation Task List" below) or include the required bootstrap work in this feature's list as an explicit "Foundation" parent task — never generate implementation tasks that have no runnable project to land in.
+3.  **Assess Current State:** Review the existing codebase to understand existing infrastructure, architectural patterns and conventions established in the project's ADR. Identify existing components, utilities, and files that can be leveraged or need modification. **If the codebase is empty or nearly empty** (e.g., this is the project's first feature), check whether `0xcc/tasks/000_FTASKS_Project_Foundation.md` exists. If it does not, either generate it first (see "Project Foundation Task List" below) or include the required bootstrap work in this feature's list as an explicit "Foundation" parent task — never generate implementation tasks that have no runnable project to land in.
 4.  **Phase 1: Generate Parent Tasks:** Based on the document analysis and current state assessment, create the file and generate the main, high-level tasks required to implement the feature. **Scale the number of parent tasks to the feature's complexity** (use the PRD's "Implementation Considerations" assessment): a simple feature may need 3–4, a complex one 8 or more. Do not compress a complex feature into a fixed number of tasks. **Each parent task must cite the functional requirement numbers it covers** (e.g., "covers FR-1, FR-3"). Present these tasks to the user in the specified format (without sub-tasks yet). Inform the user: "I have generated the high-level tasks based on the PRD. Ready to generate the sub-tasks? Respond with 'Go' to proceed."
 5.  **Wait for Confirmation:** Pause and wait for the user to respond with "Go".
 6.  **Phase 2: Generate Sub-Tasks:** Break down each parent task into smaller, actionable sub-tasks. Granularity rule: **one sub-task ≈ one commit** — completable in a single sitting, with a verifiable outcome. Ensure sub-tasks logically follow from the parent task, cover the implementation details from the PRD/TDD/TID, and consider existing codebase patterns where relevant without being constrained by them. **For every acceptance criterion and edge case in the PRD, create both an implementing sub-task and a testing sub-task.**
@@ -31,7 +31,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 11. **Run the Coverage Audit:** Complete the audit below and fix any gaps before presenting the final list.
 12. **Identify Relevant Files:** Based on the tasks and source documents, identify files to be created or modified, including corresponding test files.
 13. **Generate Final Output:** Combine parent tasks, sub-tasks, relevant files, checklist results, and notes into the final Markdown structure.
-14. **Save Task List:** Save the document in `0xcc/tasks/` as `[###]_FTASKS|[feature-name].md`, where `[feature-name]` matches the base name of the input Feature PRD file (e.g., input `001_FPRD|User_Profile_Editing.md` → output `001_FTASKS|User_Profile_Editing.md`).
+14. **Save Task List:** Save the document in `0xcc/tasks/` as `[###]_FTASKS|[feature-name].md`, where `[feature-name]` matches the base name of the input Feature PRD file (e.g., input `001_FPRD_User_Profile_Editing.md` → output `001_FTASKS_User_Profile_Editing.md`).
 15. **Update AGENT.md:** Record the new task list in the Document Inventory (add/flip its entry to ✅) and update Current Status/Next Steps.
 
 ## Category Checklist
@@ -107,11 +107,11 @@ The generated task list _must_ follow this structure:
 
 ## Project Foundation Task List (once per project)
 
-Work that belongs to no single feature — repo and toolchain scaffolding, framework/app initialization, database provisioning and base schema, CI/CD pipeline, test runner configuration, authentication foundation, logging and error-handling utilities, design system setup, deployment environments — gets its own backlog: `0xcc/tasks/000_FTASKS|Project_Foundation.md`.
+Work that belongs to no single feature — repo and toolchain scaffolding, framework/app initialization, database provisioning and base schema, CI/CD pipeline, test runner configuration, authentication foundation, logging and error-handling utilities, design system setup, deployment environments — gets its own backlog: `0xcc/tasks/000_FTASKS_Project_Foundation.md`.
 
 Generate it once, right after the ADR is complete and before the first feature, using this same document's process with these substitutions:
 
-- **Inputs:** Project PRD (`000_PPRD|...`) and ADR (`000_PADR|...`) instead of a Feature PRD/TDD/TID
+- **Inputs:** Project PRD (`000_PPRD_...`) and ADR (`000_PADR_...`) instead of a Feature PRD/TDD/TID
 - **Requirement source:** the ADR's Technology Stack, Development Standards, and infrastructure decisions; the Project PRD's high-level and non-functional requirements
 - **Final parent task:** "Foundation Acceptance" — a clean clone builds, tests run green, CI passes, and a walking-skeleton deploy succeeds
 

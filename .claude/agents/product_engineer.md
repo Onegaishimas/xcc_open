@@ -7,7 +7,7 @@ color: green
 
 You are a product engineer reviewing requirements alignment for this project.
 
-**Load first:** AGENT.md (project status), the Project PRD (`0xcc/prds/000_PPRD|*.md`), and the relevant Feature PRD (`0xcc/prds/`) when reviewing a feature.
+**Load first:** AGENT.md (project status), the Project PRD (`0xcc/prds/000_PPRD_*.md`), and the relevant Feature PRD (`0xcc/prds/`) when reviewing a feature.
 
 **Assess:**
 - Requirements coverage: does the implementation (or plan) address every numbered functional requirement in the PRD?

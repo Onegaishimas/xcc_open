@@ -110,27 +110,27 @@ code .
 # Right after cloning, before anything else
 @0xcc/instruct/001_generate-brd.md
 # Provide: free-form transcript + supporting research/documents
-# Output: 0xcc/prds/000_BRD|[project-name].md
+# Output: 0xcc/prds/000_BRD_[project-name].md
 ```
 
 ### Phase 1: Project Foundation
 ```bash
 # Session 1: Project Vision
 @0xcc/instruct/002_create-project-prd.md
-@0xcc/prds/000_BRD|[project-name].md   # if it exists
-# Output: 0xcc/prds/000_PPRD|[project-name].md
+@0xcc/prds/000_BRD_[project-name].md   # if it exists
+# Output: 0xcc/prds/000_PPRD_[project-name].md
 
 # Session 2: Technical Foundation
 @0xcc/instruct/003_create-adr.md
-@0xcc/prds/000_PPRD|[project-name].md
-# Output: 0xcc/adrs/000_PADR|[project-name].md
+@0xcc/prds/000_PPRD_[project-name].md
+# Output: 0xcc/adrs/000_PADR_[project-name].md
 # Action: Copy Project Standards section to AGENT.md
 
 # Session 3: Foundation Backlog
 @0xcc/instruct/007_generate-tasks.md
-@0xcc/prds/000_PPRD|[project-name].md
-@0xcc/adrs/000_PADR|[project-name].md
-# Output: 0xcc/tasks/000_FTASKS|Project_Foundation.md
+@0xcc/prds/000_PPRD_[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
+# Output: 0xcc/tasks/000_FTASKS_Project_Foundation.md
 # (scaffolding, CI/CD, database, auth, tooling — work owned by no single feature)
 ```
 
@@ -138,8 +138,8 @@ code .
 ```bash
 # Feature Requirements
 @0xcc/instruct/004_create-feature-prd.md
-@0xcc/prds/000_PPRD|[project-name].md
-@0xcc/adrs/000_PADR|[project-name].md
+@0xcc/prds/000_PPRD_[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
 # Output: 0xcc/prds/[###]_FPRD|[feature-name].md
 
 # Technical Design
@@ -175,7 +175,7 @@ code .
 your-project-name/
 ├── 0xcc/                           # Core XCC Framework
 │   ├── adrs/                       # Architecture Decision Records
-│   │   └── 000_PADR|Project_Name.md
+│   │   └── 000_PADR_Project_Name.md
 │   ├── docs/                       # Additional framework documentation
 │   ├── instruct/                   # XCC Framework instruction files
 │   │   ├── 000_README.md
@@ -188,20 +188,20 @@ your-project-name/
 │   │   ├── 007_generate-tasks.md
 │   │   └── 008_process-task-list.md
 │   ├── prds/                       # Product Requirements Documents
-│   │   ├── 000_BRD|Project_Name.md
-│   │   ├── 000_PPRD|Project_Name.md
-│   │   ├── 001_FPRD|Feature_A.md
-│   │   └── 002_FPRD|Feature_B.md
+│   │   ├── 000_BRD_Project_Name.md
+│   │   ├── 000_PPRD_Project_Name.md
+│   │   ├── 001_FPRD_Feature_A.md
+│   │   └── 002_FPRD_Feature_B.md
 │   ├── tasks/                      # Task Lists with progress tracking
-│   │   ├── 000_FTASKS|Project_Foundation.md
-│   │   ├── 001_FTASKS|Feature_A.md
-│   │   └── 002_FTASKS|Feature_B.md
+│   │   ├── 000_FTASKS_Project_Foundation.md
+│   │   ├── 001_FTASKS_Feature_A.md
+│   │   └── 002_FTASKS_Feature_B.md
 │   ├── tdds/                       # Technical Design Documents
-│   │   ├── 001_FTDD|Feature_A.md
-│   │   └── 002_FTDD|Feature_B.md
+│   │   ├── 001_FTDD_Feature_A.md
+│   │   └── 002_FTDD_Feature_B.md
 │   ├── tids/                       # Technical Implementation Documents
-│   │   ├── 001_FTID|Feature_A.md
-│   │   └── 002_FTID|Feature_B.md
+│   │   ├── 001_FTID_Feature_A.md
+│   │   └── 002_FTID_Feature_B.md
 │   └── scripts/                    # Optional automation scripts
 ├── .claude/                        # Claude Extensions System
 │   ├── commands/                   # Command definitions
@@ -296,8 +296,8 @@ your-project-name/
 ```bash
 # Reload the core project files
 @AGENT.md
-@0xcc/prds/000_PPRD|[project-name].md
-@0xcc/adrs/000_PADR|[project-name].md
+@0xcc/prds/000_PPRD_[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
 
 # Then ask: "Please help me understand where I am in the workflow"
 ```

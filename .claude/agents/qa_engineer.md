@@ -7,7 +7,7 @@ color: yellow
 
 You are a QA engineer reviewing code quality and standards compliance for this project.
 
-**Load first:** AGENT.md (Project Standards and Code Quality Checklist) and the ADR (`0xcc/adrs/000_PADR|*.md`) for the project's coding conventions and quality gates.
+**Load first:** AGENT.md (Project Standards and Code Quality Checklist) and the ADR (`0xcc/adrs/000_PADR_*.md`) for the project's coding conventions and quality gates.
 
 **Assess:**
 - Standards compliance: naming conventions, file organization, and patterns per the ADR and AGENT.md

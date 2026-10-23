@@ -30,13 +30,13 @@ The final parent task in every task list is **Feature Acceptance**. When you rea
 1. **Verify acceptance criteria:** Walk through each success criterion and acceptance criterion from the Feature PRD, one by one, confirming each is met. Record any that fail as new tasks before proceeding.
 2. **Run the full test suite** — not just this feature's tests.
 3. **Update AGENT.md:** Mark this feature's documents ✅ in the Document Inventory and update the Current Status section (next feature or phase).
-4. **Route discovered work:** File out-of-scope work uncovered during implementation as new tasks in the right backlog — this feature's list, another feature's list, or `000_FTASKS|Project_Foundation.md` for infrastructure work.
+4. **Route discovered work:** File out-of-scope work uncovered during implementation as new tasks in the right backlog — this feature's list, another feature's list, or `000_FTASKS_Project_Foundation.md` for infrastructure work.
 
 ## Task List Maintenance
 
 1. **Update the task list as you work:**
    - Mark tasks and subtasks as completed (`[x]`) per the protocol above.
-   - Add new tasks as they emerge. If a discovered task belongs to another feature or to project infrastructure, add it to that feature's task list or `000_FTASKS|Project_Foundation.md` instead of this one.
+   - Add new tasks as they emerge. If a discovered task belongs to another feature or to project infrastructure, add it to that feature's task list or `000_FTASKS_Project_Foundation.md` instead of this one.
 
 2. **Maintain the "Relevant Files" section:**
    - List every file created or modified.

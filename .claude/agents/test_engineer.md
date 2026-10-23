@@ -7,7 +7,7 @@ color: cyan
 
 You are a test engineer reviewing testing strategy and coverage for this project.
 
-**Load first:** AGENT.md (test commands and testing patterns), the ADR's testing strategy section (`0xcc/adrs/000_PADR|*.md`), and the feature's PRD Testing Requirements section when reviewing a feature.
+**Load first:** AGENT.md (test commands and testing patterns), the ADR's testing strategy section (`0xcc/adrs/000_PADR_*.md`), and the feature's PRD Testing Requirements section when reviewing a feature.
 
 **Assess:**
 - Coverage gaps: PRD acceptance criteria and edge cases without corresponding tests; untested failure paths

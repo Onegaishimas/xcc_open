@@ -122,7 +122,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to clarifying questions
 
 **Outputs:**
-- `000_BRD|[project-name].md` in `0xcc/prds/` folder
+- `000_BRD_[project-name].md` in `0xcc/prds/` folder
 - Structured business context consumed directly by `002_create-project-prd.md`
 
 **Key Questions Addressed:**
@@ -149,7 +149,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to strategic clarifying questions about scope, users, timeline, success metrics
 
 **Outputs:**
-- `000_PPRD|[project-name].md` in `/prds/` folder
+- `000_PPRD_[project-name].md` in `/prds/` folder
 - High-level feature list for subsequent detailed specification
 - Business context for all technical decisions
 
@@ -179,7 +179,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to technical evaluation questions
 
 **Outputs:**
-- `000_PADR|[project-name].md` in `/adrs/` folder (full documentation)
+- `000_PADR_[project-name].md` in `/adrs/` folder (full documentation)
 - Project Standards section for AGENT.md (condensed memory)
 - Technology stack decisions and architectural principles
 
@@ -314,7 +314,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 
 **Outputs:**
 - `[###]_FTASKS|[feature-name].md` in `/tasks/` folder
-- Once per project: `000_FTASKS|Project_Foundation.md` — the foundation backlog generated from the Project PRD + ADR (scaffolding, CI/CD, database, auth, tooling)
+- Once per project: `000_FTASKS_Project_Foundation.md` — the foundation backlog generated from the Project PRD + ADR (scaffolding, CI/CD, database, auth, tooling)
 
 **Task Structure:**
 - Parent tasks citing covered requirement numbers
@@ -354,27 +354,27 @@ This section details each instruction document's purpose, approach, inputs, and 
 # Clone template, rm -rf .git, rename root, git init
 @0xcc/instruct/001_generate-brd.md
 # Provide: free-form transcript + supporting research/documents
-# Generate: 000_BRD|[project-name].md
+# Generate: 000_BRD_[project-name].md
 ```
 
 #### Phase 1: Project Foundation (Session 1-2)
 ```bash
 # Session 1: Project Vision
 @0xcc/instruct/002_create-project-prd.md
-@0xcc/prds/000_BRD|[project-name].md   # if it exists
-# Generate: 000_PPRD|[project-name].md
+@0xcc/prds/000_BRD_[project-name].md   # if it exists
+# Generate: 000_PPRD_[project-name].md
 
 # Session 2: Technical Foundation  
 @0xcc/instruct/003_create-adr.md
-@0xcc/prds/000_PPRD|[project-name].md
-# Generate: 000_PADR|[project-name].md
+@0xcc/prds/000_PPRD_[project-name].md
+# Generate: 000_PADR_[project-name].md
 # Copy Project Standards to AGENT.md
 
 # Session 3: Foundation Backlog
 @0xcc/instruct/007_generate-tasks.md
-@0xcc/prds/000_PPRD|[project-name].md
-@0xcc/adrs/000_PADR|[project-name].md
-# Generate: 000_FTASKS|Project_Foundation.md
+@0xcc/prds/000_PPRD_[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
+# Generate: 000_FTASKS_Project_Foundation.md
 # (scaffolding, CI/CD, database, auth, tooling — work owned by no single feature)
 ```
 
@@ -384,31 +384,31 @@ For each feature from the Project PRD:
 ```bash
 # Feature Requirements Session
 @0xcc/instruct/004_create-feature-prd.md
-@0xcc/prds/000_PPRD|[project-name].md
-@0xcc/adrs/000_PADR|[project-name].md
-# Generate: 001_FPRD|[feature-name].md
+@0xcc/prds/000_PPRD_[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
+# Generate: 001_FPRD_[feature-name].md
 
 # Technical Design Session
 @0xcc/instruct/005_create-tdd.md
-@0xcc/prds/001_FPRD|[feature-name].md
-# Generate: 001_FTDD|[feature-name].md
+@0xcc/prds/001_FPRD_[feature-name].md
+# Generate: 001_FTDD_[feature-name].md
 
 # Implementation Planning Session
 @0xcc/instruct/006_create-tid.md
-@0xcc/prds/001_FPRD|[feature-name].md
-@0xcc/tdds/001_FTDD|[feature-name].md
-# Generate: 001_FTID|[feature-name].md
+@0xcc/prds/001_FPRD_[feature-name].md
+@0xcc/tdds/001_FTDD_[feature-name].md
+# Generate: 001_FTID_[feature-name].md
 
 # Task Generation Session
 @0xcc/instruct/007_generate-tasks.md
-@0xcc/prds/001_FPRD|[feature-name].md
-@0xcc/tdds/001_FTDD|[feature-name].md
-@0xcc/tids/001_FTID|[feature-name].md
-# Generate: 001_FTASKS|[feature-name].md
+@0xcc/prds/001_FPRD_[feature-name].md
+@0xcc/tdds/001_FTDD_[feature-name].md
+@0xcc/tids/001_FTID_[feature-name].md
+# Generate: 001_FTASKS_[feature-name].md
 
 # Implementation Sessions
 @0xcc/instruct/008_process-task-list.md
-@0xcc/tasks/001_FTASKS|[feature-name].md
+@0xcc/tasks/001_FTASKS_[feature-name].md
 # Execute tasks with progress tracking
 ```
 
@@ -421,26 +421,26 @@ project-root/
 ├── GEMINI.md                                    # Stub → @AGENT.md
 └── 0xcc/
     ├── prds/
-    │   ├── 000_BRD|Project_Name.md              # Business Requirements Document
-    │   ├── 000_PPRD|Project_Name.md             # Project PRD
-    │   ├── 001_FPRD|Feature_A.md                # Feature PRDs
-    │   ├── 002_FPRD|Feature_B.md
-    │   └── 003_FPRD|Feature_C.md
+    │   ├── 000_BRD_Project_Name.md              # Business Requirements Document
+    │   ├── 000_PPRD_Project_Name.md             # Project PRD
+    │   ├── 001_FPRD_Feature_A.md                # Feature PRDs
+    │   ├── 002_FPRD_Feature_B.md
+    │   └── 003_FPRD_Feature_C.md
     ├── adrs/
-    │   └── 000_PADR|Project_Name.md             # Architecture Decision Record
+    │   └── 000_PADR_Project_Name.md             # Architecture Decision Record
     ├── tdds/
-    │   ├── 001_FTDD|Feature_A.md                # Technical Design Documents
-    │   ├── 002_FTDD|Feature_B.md
-    │   └── 003_FTDD|Feature_C.md
+    │   ├── 001_FTDD_Feature_A.md                # Technical Design Documents
+    │   ├── 002_FTDD_Feature_B.md
+    │   └── 003_FTDD_Feature_C.md
     ├── tids/
-    │   ├── 001_FTID|Feature_A.md                # Technical Implementation Documents
-    │   ├── 002_FTID|Feature_B.md
-    │   └── 003_FTID|Feature_C.md
+    │   ├── 001_FTID_Feature_A.md                # Technical Implementation Documents
+    │   ├── 002_FTID_Feature_B.md
+    │   └── 003_FTID_Feature_C.md
     ├── tasks/
-    │   ├── 000_FTASKS|Project_Foundation.md     # Foundation backlog (from PPRD + ADR)
-    │   ├── 001_FTASKS|Feature_A.md              # Feature Task Lists
-    │   ├── 002_FTASKS|Feature_B.md
-    │   └── 003_FTASKS|Feature_C.md
+    │   ├── 000_FTASKS_Project_Foundation.md     # Foundation backlog (from PPRD + ADR)
+    │   ├── 001_FTASKS_Feature_A.md              # Feature Task Lists
+    │   ├── 002_FTASKS_Feature_B.md
+    │   └── 003_FTASKS_Feature_C.md
     ├── docs/
     │   └── [Additional project documentation]
     └── instruct/
@@ -474,11 +474,11 @@ AGENT.md is the single file that carries project state between sessions — no s
 
 ## Document Inventory
 ### Completed Documents
-- ✅ 000_PPRD|Project_Name.md
-- ✅ 000_PADR|Project_Name.md
-- ✅ 001_FPRD|Feature_A.md
-- ⏳ 001_FTDD|Feature_A.md (in progress)
-- ❌ 001_FTID|Feature_A.md (pending)
+- ✅ 000_PPRD_Project_Name.md
+- ✅ 000_PADR_Project_Name.md
+- ✅ 001_FPRD_Feature_A.md
+- ⏳ 001_FTDD_Feature_A.md (in progress)
+- ❌ 001_FTID_Feature_A.md (pending)
 
 ### Feature Priority Order
 1. Feature A (Core/MVP)
@@ -577,7 +577,7 @@ You'll know the framework is working when:
    - ✅ "Create user registration form with email validation, password strength requirements, and email confirmation workflow"
 
 2. **Reference Context Explicitly**
-   - Always reference related documents: `@0xcc/prds/000_PPRD|Project_Name.md`
+   - Always reference related documents: `@0xcc/prds/000_PPRD_Project_Name.md`
    - Link to ADR decisions: "Following JWT approach per ADR section 2.3"
 
 3. **Update Status Religiously**
@@ -615,8 +615,8 @@ You'll know the framework is working when:
 **Solution:** Reload the core project files
 ```bash
 @AGENT.md                           # Project memory and Document Inventory
-@0xcc/prds/000_PPRD|[project-name].md     # Project foundation  
-@0xcc/adrs/000_PADR|[project-name].md     # Technical standards
+@0xcc/prds/000_PPRD_[project-name].md     # Project foundation  
+@0xcc/adrs/000_PADR_[project-name].md     # Technical standards
 ls -la */                           # Check completion status
 ```
 

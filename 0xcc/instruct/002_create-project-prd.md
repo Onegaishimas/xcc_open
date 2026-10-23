@@ -4,14 +4,14 @@
 
 To guide an AI assistant in creating a high-level Product Requirements Document (PRD) in Markdown format that captures the overall project vision, goals, and breaks down the project into discrete features. This serves as the foundation for all subsequent feature-level development work.
 
-If a Business Requirements Document exists at `0xcc/prds/000_BRD|[project-name].md` (produced by `0xcc/instruct/001_generate-brd.md`), use it as the primary source of project context instead of asking the user to restate everything from scratch.
+If a Business Requirements Document exists at `0xcc/prds/000_BRD_[project-name].md` (produced by `0xcc/instruct/001_generate-brd.md`), use it as the primary source of project context instead of asking the user to restate everything from scratch.
 
 ## Process
 
-1. **Receive Project Description:** Use the BRD (`0xcc/prds/000_BRD|[project-name].md`) if one exists; otherwise the user provides a high-level description of the project they want to build.
+1. **Receive Project Description:** Use the BRD (`0xcc/prds/000_BRD_[project-name].md`) if one exists; otherwise the user provides a high-level description of the project they want to build.
 2. **Ask Strategic Clarifying Questions:** Before writing the Project PRD, the AI *must* ask clarifying questions to understand the project scope, goals, and feature breakdown. **Skip questions the BRD already answers** — ask only about what is new, ambiguous, or marked TBD. Provide options in letter/number lists for easy selection.
 3. **Generate Project PRD:** Create a comprehensive project-level document using the structure outlined below.
-4. **Save Project PRD:** Save the generated document as `000_PPRD|[project-name].md` inside the `0xcc/prds/` directory.
+4. **Save Project PRD:** Save the generated document as `000_PPRD_[project-name].md` inside the `0xcc/prds/` directory.
 
 ## Strategic Clarifying Questions (Examples)
 
@@ -157,7 +157,7 @@ The Project PRD should be understandable by:
 
 * **Format:** Markdown (`.md`)
 * **Location:** `0xcc/prds/`
-* **Filename:** `000_PPRD|[project-name].md`
+* **Filename:** `000_PPRD_[project-name].md`
 
 ## Final Instructions
 

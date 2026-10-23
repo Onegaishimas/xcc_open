@@ -21,7 +21,7 @@ Once the source material is ready, run this prompt.
 1. **Gather Source Material:** Collect the free-form transcript and any supporting documents (research, notes, existing requirements, etc.).
 2. **Ask Clarifying Questions:** The AI must first read all source material, then generate a numbered list of strategic clarifying questions grouped by category (scope, users, timeline, success metrics, integrations, risks). Do NOT write the BRD until the user answers.
 3. **Generate the BRD:** Once answers are provided, produce the BRD strictly in the YAML format below, preserving key details in concise, business-focused (not solution-specific) language. Mark missing information as `"TBD"`.
-4. **Save the BRD:** Save the generated document as `000_BRD|[project-name].md` inside the `0xcc/prds/` directory.
+4. **Save the BRD:** Save the generated document as `000_BRD_[project-name].md` inside the `0xcc/prds/` directory.
 
 ## BRD Template
 
@@ -97,7 +97,7 @@ TASK: Using the source material plus the user's answers, output the BRD in the e
 
 * **Format:** YAML embedded in Markdown (`.md`)
 * **Location:** `0xcc/prds/`
-* **Filename:** `000_BRD|[project-name].md`
+* **Filename:** `000_BRD_[project-name].md`
 
 ## Final Instructions
 

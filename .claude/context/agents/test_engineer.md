@@ -71,7 +71,7 @@
 ```markdown
 @.claude/context/agents/test_engineer.md
 @AGENT.md
-@0xcc/adrs/000_PADR|[project-name].md
+@0xcc/adrs/000_PADR_[project-name].md
 ```
 
 ### Integration with Commands
