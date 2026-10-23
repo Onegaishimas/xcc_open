@@ -27,10 +27,10 @@ To pick up where you left off in a new session, load `@AGENT.md` and check the D
    - `000_FTASKS_Project_Foundation.md` → `0xcc/tasks/` (Foundation backlog from PPRD + ADR: scaffolding, CI/CD, database, auth, tooling)
 
 2. **Feature Development** (repeat for each feature)
-   - `[###]_FPRD|[feature-name].md` → `0xcc/prds/` (Feature PRD)
-   - `[###]_FTDD|[feature-name].md` → `0xcc/tdds/` (Technical Design Doc)
-   - `[###]_FTID|[feature-name].md` → `0xcc/tids/` (Technical Implementation Doc)
-   - `[###]_FTASKS|[feature-name].md` → `0xcc/tasks/` (Task List)
+   - `[###]_FPRD_[feature-name].md` → `0xcc/prds/` (Feature PRD)
+   - `[###]_FTDD_[feature-name].md` → `0xcc/tdds/` (Technical Design Doc)
+   - `[###]_FTID_[feature-name].md` → `0xcc/tids/` (Technical Implementation Doc)
+   - `[###]_FTASKS_[feature-name].md` → `0xcc/tasks/` (Task List)
 
 ### Instruction Documents Reference
 - `@0xcc/instruct/001_generate-brd.md` - Converts a free-form transcript + supporting material into a Business Requirements Document (run once, first)

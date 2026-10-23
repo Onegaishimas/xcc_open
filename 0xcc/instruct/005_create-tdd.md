@@ -11,7 +11,7 @@ To guide an AI assistant in creating a detailed Technical Design Document (TDD) 
 3. **Assess Current Codebase:** Review existing architecture, design patterns, technologies, and conventions used in the project.
 4. **Ask Technical Clarifying Questions:** Before writing the TDD, the AI *must* ask technical clarifying questions to understand implementation preferences and constraints. Provide options in letter/number lists for easy selection.
 5. **Generate TDD:** Create a comprehensive technical design document using the structure outlined below.
-6. **Save TDD:** Save the generated document as `[###]_FTDD|[feature-name].md` inside the `0xcc/tdds/` directory.
+6. **Save TDD:** Save the generated document as `[###]_FTDD_[feature-name].md` inside the `0xcc/tdds/` directory.
 
 ## Technical Clarifying Questions (Examples)
 
@@ -151,7 +151,7 @@ The TDD should be understandable by:
 
 * **Format:** Markdown (`.md`)
 * **Location:** `0xcc/tdds/`
-* **Filename:** `[###]_FTDD|[feature-name].md` (should match the corresponding PRD name pattern)
+* **Filename:** `[###]_FTDD_[feature-name].md` (should match the corresponding PRD name pattern)
 
 ## Final Instructions
 

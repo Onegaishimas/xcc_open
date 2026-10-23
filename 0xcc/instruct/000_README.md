@@ -212,7 +212,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to feature-specific clarifying questions
 
 **Outputs:**
-- `[###]_FPRD|[feature-name].md` in `/prds/` folder
+- `[###]_FPRD_[feature-name].md` in `/prds/` folder
 - Detailed functional and non-functional requirements
 - User stories with acceptance criteria
 - Integration specifications and dependencies
@@ -244,7 +244,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to technical design questions
 
 **Outputs:**
-- `[###]_FTDD|[feature-name].md` in `/tdds/` folder
+- `[###]_FTDD_[feature-name].md` in `/tdds/` folder
 - System architecture and component relationships
 - Data design and API patterns
 - Performance and security considerations
@@ -278,7 +278,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - Answers to implementation-specific questions
 
 **Outputs:**
-- `[###]_FTID|[feature-name].md` in `/tids/` folder
+- `[###]_FTID_[feature-name].md` in `/tids/` folder
 - File organization and naming patterns
 - Component implementation hints and patterns
 - Database and API implementation strategies
@@ -313,7 +313,7 @@ This section details each instruction document's purpose, approach, inputs, and 
 - User confirmation to proceed from parent tasks to sub-tasks
 
 **Outputs:**
-- `[###]_FTASKS|[feature-name].md` in `/tasks/` folder
+- `[###]_FTASKS_[feature-name].md` in `/tasks/` folder
 - Once per project: `000_FTASKS_Project_Foundation.md` — the foundation backlog generated from the Project PRD + ADR (scaffolding, CI/CD, database, auth, tooling)
 
 **Task Structure:**

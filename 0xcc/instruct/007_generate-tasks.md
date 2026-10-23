@@ -6,15 +6,15 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 
 ## Inputs
 
-- **Required:** Feature PRD (`[###]_FPRD|[feature-name].md`) — requirements, user stories, acceptance criteria, edge cases
-- **Required:** Feature TDD (`[###]_FTDD|[feature-name].md`) and TID (`[###]_FTID|[feature-name].md`) — these carry the migration, deployment, configuration, error-handling, integration, and utility work that the PRD alone does not. If either is missing, stop and recommend creating it first (`005_create-tdd.md` / `006_create-tid.md`). Only proceed without them at the user's explicit request, and note in the task list that coverage is limited to the PRD.
+- **Required:** Feature PRD (`[###]_FPRD_[feature-name].md`) — requirements, user stories, acceptance criteria, edge cases
+- **Required:** Feature TDD (`[###]_FTDD_[feature-name].md`) and TID (`[###]_FTID_[feature-name].md`) — these carry the migration, deployment, configuration, error-handling, integration, and utility work that the PRD alone does not. If either is missing, stop and recommend creating it first (`005_create-tdd.md` / `006_create-tid.md`). Only proceed without them at the user's explicit request, and note in the task list that coverage is limited to the PRD.
 - **Reference:** Project ADR (`000_PADR_[project-name].md`) for standards, and AGENT.md for project test commands
 
 ## Output
 
 - **Format:** Markdown (`.md`)
 - **Location:** `0xcc/tasks/`
-- **Filename:** `[###]_FTASKS|[feature-name].md` (matching the corresponding PRD's feature name)
+- **Filename:** `[###]_FTASKS_[feature-name].md` (matching the corresponding PRD's feature name)
 
 ## Process
 
@@ -31,7 +31,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 11. **Run the Coverage Audit:** Complete the audit below and fix any gaps before presenting the final list.
 12. **Identify Relevant Files:** Based on the tasks and source documents, identify files to be created or modified, including corresponding test files.
 13. **Generate Final Output:** Combine parent tasks, sub-tasks, relevant files, checklist results, and notes into the final Markdown structure.
-14. **Save Task List:** Save the document in `0xcc/tasks/` as `[###]_FTASKS|[feature-name].md`, where `[feature-name]` matches the base name of the input Feature PRD file (e.g., input `001_FPRD_User_Profile_Editing.md` → output `001_FTASKS_User_Profile_Editing.md`).
+14. **Save Task List:** Save the document in `0xcc/tasks/` as `[###]_FTASKS_[feature-name].md`, where `[feature-name]` matches the base name of the input Feature PRD file (e.g., input `001_FPRD_User_Profile_Editing.md` → output `001_FTASKS_User_Profile_Editing.md`).
 15. **Update AGENT.md:** Record the new task list in the Document Inventory (add/flip its entry to ✅) and update Current Status/Next Steps.
 
 ## Category Checklist

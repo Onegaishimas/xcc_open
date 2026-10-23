@@ -10,7 +10,7 @@ To guide an AI assistant in creating a detailed, feature-specific Product Requir
 2. **Reference Project Context:** Review the Project PRD and ADR to understand overall project goals and established technical standards.
 3. **Ask Feature-Specific Clarifying Questions:** Before writing the Feature PRD, the AI *must* ask clarifying questions to gather sufficient detail about this specific feature. Provide options in letter/number lists for easy selection.
 4. **Generate Feature PRD:** Based on the feature request, project context, and user answers, generate a PRD using the structure outlined below.
-5. **Save Feature PRD:** Save the generated document as `[###]_FPRD|[feature-name].md` inside the `0xcc/prds/` directory.
+5. **Save Feature PRD:** Save the generated document as `[###]_FPRD_[feature-name].md` inside the `0xcc/prds/` directory.
 
 ## Feature-Specific Clarifying Questions (Examples)
 
@@ -170,7 +170,7 @@ Assume the primary reader of the Feature PRD is a **junior developer** who will 
 
 * **Format:** Markdown (`.md`)
 * **Location:** `0xcc/prds/`
-* **Filename:** `[###]_FPRD|[feature-name].md`
+* **Filename:** `[###]_FPRD_[feature-name].md`
 
 ## Integration with Project Context
 

@@ -11,7 +11,7 @@ To guide an AI assistant in creating a detailed Technical Implementation Documen
 3. **Deep Codebase Analysis:** Perform comprehensive analysis of existing code structure, patterns, utilities, and conventions.
 4. **Ask Implementation-Specific Questions:** Before writing the TID, ask detailed implementation questions. Provide options in letter/number lists for easy selection.
 5. **Generate TID:** Create a comprehensive implementation document using the structure outlined below.
-6. **Save TID:** Save the generated document as `[###]_FTID|[feature-name].md` inside the `0xcc/tids/` directory.
+6. **Save TID:** Save the generated document as `[###]_FTID_[feature-name].md` inside the `0xcc/tids/` directory.
 
 ## Implementation Clarifying Questions (Examples)
 
@@ -156,7 +156,7 @@ The TID serves as the direct input for:
 
 * **Format:** Markdown (`.md`)
 * **Location:** `0xcc/tids/`
-* **Filename:** `[###]_FTID|[feature-name].md` (should match corresponding PRD and TDD name patterns)
+* **Filename:** `[###]_FTID_[feature-name].md` (should match corresponding PRD and TDD name patterns)
 
 ## Integration with Task Generation
 

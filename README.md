@@ -140,29 +140,29 @@ code .
 @0xcc/instruct/004_create-feature-prd.md
 @0xcc/prds/000_PPRD_[project-name].md
 @0xcc/adrs/000_PADR_[project-name].md
-# Output: 0xcc/prds/[###]_FPRD|[feature-name].md
+# Output: 0xcc/prds/[###]_FPRD_[feature-name].md
 
 # Technical Design
 @0xcc/instruct/005_create-tdd.md
-@0xcc/prds/[###]_FPRD|[feature-name].md
-# Output: 0xcc/tdds/[###]_FTDD|[feature-name].md
+@0xcc/prds/[###]_FPRD_[feature-name].md
+# Output: 0xcc/tdds/[###]_FTDD_[feature-name].md
 
 # Implementation Planning
 @0xcc/instruct/006_create-tid.md
-@0xcc/prds/[###]_FPRD|[feature-name].md
-@0xcc/tdds/[###]_FTDD|[feature-name].md
-# Output: 0xcc/tids/[###]_FTID|[feature-name].md
+@0xcc/prds/[###]_FPRD_[feature-name].md
+@0xcc/tdds/[###]_FTDD_[feature-name].md
+# Output: 0xcc/tids/[###]_FTID_[feature-name].md
 
 # Task Generation
 @0xcc/instruct/007_generate-tasks.md
-@0xcc/prds/[###]_FPRD|[feature-name].md
-@0xcc/tdds/[###]_FTDD|[feature-name].md
-@0xcc/tids/[###]_FTID|[feature-name].md
-# Output: 0xcc/tasks/[###]_FTASKS|[feature-name].md
+@0xcc/prds/[###]_FPRD_[feature-name].md
+@0xcc/tdds/[###]_FTDD_[feature-name].md
+@0xcc/tids/[###]_FTID_[feature-name].md
+# Output: 0xcc/tasks/[###]_FTASKS_[feature-name].md
 
 # Implementation with Progress Tracking
 @0xcc/instruct/008_process-task-list.md
-@0xcc/tasks/[###]_FTASKS|[feature-name].md
+@0xcc/tasks/[###]_FTASKS_[feature-name].md
 # Execute tasks with progress tracking
 ```
 
